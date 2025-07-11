@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.ArrayList;
+
 class User {
     private String name;
     private List<Book> borrowedBooks = new ArrayList<>();
