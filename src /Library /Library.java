@@ -1,35 +1,45 @@
 public class Library {
-  public static void main(String[] args) {
-    // Main library
-      Library myLibrary = new Library("City Public Library");
-    // Create a librarian
+    public static void main(String[] args) {
+        // Main library
+        Library myLibrary = new Library("City Public Library");
+
+        // Create librarian
         Librarian librarian1 = new Librarian("L001", "Mr. Jones");
 
-    // Librarian adds books to the library
+        // Create books
+        Book book1 = new Book("1984");
+        Book book2 = new Book("To Kill a Mockingbird");
+        Book book3 = new Book("The Great Gatsby");
+
+        // Add books
         librarian1.addBookToLibrary(myLibrary, book1);
         librarian1.addBookToLibrary(myLibrary, book2);
         myLibrary.addBook(book3); // Another way to add
-    
-    // Display all books in the library
+
+        // Display books
         myLibrary.displayAllBooks();
 
-    // Users borrow books
+        // Create users
+        User user1 = new User("Alice");
+        User user2 = new User("Bob");
+
+        // Users borrow books
         user1.borrowBook(book1);
         user2.borrowBook(book2);
-        user1.borrowBook(book2); // Trying to borrow an already borrowed book
+        user1.borrowBook(book2); // Already borrowed
 
-    // Display borrowed books for users
+        // Display borrowed books
         user1.displayBorrowedBooks();
         user2.displayBorrowedBooks();
 
-    // Display all books in the library after borrowing
+        // Display all books after borrow
         myLibrary.displayAllBooks();
 
-    // User returns a book
+        // Return books
         user1.returnBook(book1);
-        user1.returnBook(book3); // Trying to return a book not borrowed
+        user1.returnBook(book3); // Not borrowed
 
-    // Display all books in the library after returning
+        // Display all books after return
         myLibrary.displayAllBooks();
-  }
+    }
 }
