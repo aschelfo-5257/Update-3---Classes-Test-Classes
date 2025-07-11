@@ -1,4 +1,4 @@
-public class Library {
+public class Department {
     public static void main(String[] args) {
         // Main library
         Library myLibrary = new Library("City Public Library");
